@@ -58,4 +58,5 @@ Este repositorio es parte del esfuerzo por fortalecer la comunidad de AWS. Únet
 
 Este repositorio está licenciado bajo la MIT License, lo que significa que puedes usar, modificar y distribuir los proyectos libremente siempre y cuando atribuyas el trabajo original.
 
-¡Gracias por ser parte de esta comunidad! 🎉 Si tienes preguntas o ideas, no dudes en abrir un Issue o enviarme tus comentarios. ¡Juntos podemos construir grandes cosas en AWS! 🚀
+
+> **¡Gracias por ser parte de esta comunidad! 🎉 Si tienes preguntas o ideas, no dudes en abrir un Issue o enviarme tus comentarios. ¡Juntos podemos construir grandes cosas en AWS! 🚀**
