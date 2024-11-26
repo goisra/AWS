@@ -1,4 +1,4 @@
-# 🚀 Proyectos Libres en AWS 🌐
+# 🌐 Proyectos Open source en AWS 
 
 ¡Bienvenido/a al repositorio **Proyectos Libres en AWS**! Este espacio está dedicado a proyectos abiertos creados con tecnologías y servicios de **Amazon Web Services (AWS)**. Nuestro objetivo es fomentar la colaboración, el aprendizaje y el crecimiento de la comunidad en torno a la nube de AWS. 🌍💻
 
