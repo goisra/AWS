@@ -33,7 +33,7 @@ El propósito de este repositorio es:
    ```bash
    git checkout -b mi-mejora
 4. **Haz tus mejoras**:
-  - Añade funcionalidades, corrige errores o mejora la documentación.
+   - Añade funcionalidades, corrige errores o mejora la documentación.
 5. **Envía un Pull Request**:
   - Describe claramente tus cambios y por qué son útiles.
 
