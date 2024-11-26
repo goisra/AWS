@@ -35,7 +35,7 @@ El propósito de este repositorio es:
 4. **Haz tus mejoras**:
    - Añade funcionalidades, corrige errores o mejora la documentación.
 5. **Envía un Pull Request**:
-  - Describe claramente tus cambios y por qué son útiles.
+   - Describe claramente tus cambios y por qué son útiles.
 
 ## 🛠 Tecnologías Utilizadas
 
