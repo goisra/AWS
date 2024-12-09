@@ -62,7 +62,7 @@ Este repositorio está licenciado bajo la MIT License, lo que significa que pued
 <br>
 
 <p align="center">
-**¡Gracias por ser parte de esta comunidad!** 🎉  
-Si tienes preguntas o ideas, no dudes en abrir un [Issue](https://github.com/goisra/AWS/issues) o enviarme tus comentarios.  
-**¡Juntos podemos construir grandes cosas en AWS!** 🚀  
+¡Gracias por ser parte de esta comunidad! 🎉  
+Si tienes preguntas o ideas, no dudes en abrir un <a href="https://github.com/goisra/AWS/issues">[Issue]</a> o enviarme tus comentarios.  
+¡Juntos podemos construir grandes cosas en AWS! 🚀  
 </p>
