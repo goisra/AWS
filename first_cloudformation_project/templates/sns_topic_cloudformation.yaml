@@ -1,0 +1,38 @@
+AWSTemplateFormatVersion: "2010-09-09"
+
+Description: >
+  CloudFormation template to create an Amazon SNS topic and its associated policies.
+
+Resources:
+  SNSTopic:
+    Type: AWS::SNS::Topic
+    Properties:
+      TopicName: MySNSTopic
+      DisplayName: "My SNS Topic"
+      Subscription:
+        - Endpoint: example@example.com
+          Protocol: email
+      Tags:
+        - Key: Environment
+          Value: Production
+
+  SNSTopicPolicy:
+    Type: AWS::SNS::TopicPolicy
+    Properties:
+      Topics:
+        - !Ref SNSTopic
+      PolicyDocument:
+        Version: "2012-10-17"
+        Statement:
+          - Effect: Allow
+            Principal: "*"
+            Action:
+              - "sns:Publish"
+              - "sns:Subscribe"
+              - "sns:Receive"
+            Resource: !Ref SNSTopic
+
+Outputs:
+  TopicArn:
+    Description: The ARN of the SNS topic
+    Value: !Ref SNSTopic

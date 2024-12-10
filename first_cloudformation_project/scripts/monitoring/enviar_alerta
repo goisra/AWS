@@ -1,0 +1,22 @@
+import boto3
+
+# Configuración de AWS
+sns_client = boto3.client('sns', region_name='us-east-1')
+
+# El ARN del SNS Topic desde CloudFormation
+sns_topic_arn = 'arn:aws:sns:us-east-1:123456789012:MySNSTopic'
+
+# Función para enviar un mensaje al SNS
+def enviar_mensaje_sns(mensaje):
+    try:
+        response = sns_client.publish(
+            TopicArn=sns_topic_arn,
+            Message=mensaje,
+            Subject="Alerta de Estacionamiento"
+        )
+        print(f"Mensaje enviado a SNS: {response['MessageId']}")
+    except Exception as e:
+        print(f"Error al enviar el mensaje a SNS: {e}")
+
+# Llamada a la función con un ejemplo de mensaje
+enviar_mensaje_sns("¡Alerta! Se ha detectado un vehículo en el área de entrada.")
