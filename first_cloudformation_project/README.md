@@ -50,8 +50,8 @@ Además, asegúrate de tener una cuenta de **AWS** configurada con **SNS** habil
 ## Instalación y Configuración
 
 1. **Configura tu hardware**:
-   - Conecta un **sensor ultrasónico** (o similar) a un **Arduino** que se encargue de leer las entradas y salidas de los vehículos.
-   - Asegúrate de que el Arduino esté conectado al puerto serial correcto.
+   - Conecta un **sensor ultrasónico** (o similar) a un **Microcontrolador** que se encargue de leer las entradas y salidas de los vehículos.
+   - Asegúrate de que el Microcontrolador esté conectado al puerto serial correcto.
 
 2. **Clona o descarga el proyecto**:
    - Puedes clonar el repositorio o descargar el código directamente en tu máquina local.
