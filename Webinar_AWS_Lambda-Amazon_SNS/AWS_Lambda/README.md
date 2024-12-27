@@ -8,3 +8,5 @@ Crea una función Lambda que se active con los eventos de DynamoDB Streams. Esta
 
 - AmazonSNSFullAccess: Permite publicar mensajes en SNS.
 - AmazonDynamoDBFullAccess (o una política personalizada que permita acceso a Streams).
+
+**Agrega la siguiente política personalida:** LambdaDynamoDBStreamPermissions
