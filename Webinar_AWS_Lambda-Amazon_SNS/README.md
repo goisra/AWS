@@ -26,3 +26,22 @@ Una tienda en línea quiere notificar varias partes interesadas cuando se realic
    - Un **correo electrónico** es enviado al cliente confirmando que su pedido ha sido recibido.
    - Un **mensaje** es enviado a **SQS**, que alimenta el sistema de facturación para procesar el pago.
    - Un **evento** es enviado a otro **Lambda**, que coordina con el sistema de envío/logística para organizar el despacho del pedido.
+
+### 4. Probar el sistema
+
+Para probar el sistema, crea un nuevo pedido en la tabla de DynamoDB y verifica que:
+
+- El cliente recibe un correo electrónico con los detalles del pedido.
+- El sistema de facturación recibe el mensaje en SQS.
+- El sistema de envío recibe los detalles del pedido.
+
+## Conclusión
+
+Este proyecto demuestra cómo **Amazon SNS**, **AWS Lambda**, **DynamoDB Streams** y **SQS** pueden integrarse para crear un sistema distribuido y automatizado de notificación de procesamiento de pedidos. Usando estos servicios, es posible orquestar flujos de trabajo complejos y coordinar la comunicación entre diferentes sistemas y partes interesadas.
+
+## Recursos adicionales
+
+- [Documentación de Amazon SNS](https://docs.aws.amazon.com/sns/latest/dg/welcome.html)
+- [Documentación de AWS Lambda](https://docs.aws.amazon.com/lambda/latest/dg/welcome.html)
+- [Documentación de DynamoDB Streams](https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/Streams.html)
+- [Documentación de SQS](https://docs.aws.amazon.com/sqs/latest/dg/welcome.html)
