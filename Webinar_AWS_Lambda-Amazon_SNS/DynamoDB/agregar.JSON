@@ -1,0 +1,6 @@
+{
+    "PedidoID": { "S": "12345" },
+    "Producto": { "S": "Mouse" },
+    "Cantidad": { "N": "2" },
+    "Cliente": { "S": "Israel Jesús" }
+  }
