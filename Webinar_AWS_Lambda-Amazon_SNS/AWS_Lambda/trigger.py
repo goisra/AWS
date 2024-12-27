@@ -13,12 +13,12 @@ def lambda_handler(event, context):
             producto = pedido['Producto']['S']
             cantidad = pedido['Cantidad']['N']
             
-            # Crear el mensaje para el correo
+            #Mensaje para el correo
             message = f"Nuevo pedido:\nCliente: {cliente}\nProducto: {producto}\nCantidad: {cantidad}"
             
             # Enviar el mensaje por SNS
             sns_client.publish(
-                TopicArn='arn:aws:sns:us-east-1:992382420467:Pedidos',  # Asegúrate de que este ARN esté correcto
+                TopicArn='Nombre del ARN',  
                 Message=message,
                 Subject='Nuevo pedido recibido'
             )
