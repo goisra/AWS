@@ -1,25 +1,30 @@
 import boto3
+import json
 
-# Crear el cliente de SNS
 sns_client = boto3.client('sns')
 
-# Función Lambda
 def lambda_handler(event, context):
+    print("Event received:", json.dumps(event))
+    
     for record in event['Records']:
-        # Extraer el nuevo registro de DynamoDB
+        print("Processing record:", record)
+        
         if record['eventName'] == 'INSERT':
             pedido = record['dynamodb']['NewImage']
             cliente = pedido['Cliente']['S']
             producto = pedido['Producto']['S']
             cantidad = pedido['Cantidad']['N']
             
-            #Mensaje para el correo
             message = f"Nuevo pedido:\nCliente: {cliente}\nProducto: {producto}\nCantidad: {cantidad}"
             
-            # Enviar el mensaje por SNS
-            sns_client.publish(
-                TopicArn='Nombre del ARN',  
-                Message=message,
-                Subject='Nuevo pedido recibido'
-            )
-    return {'statusCode': 200, 'body': 'Correo enviado correctamente'}
+            try:
+                response = sns_client.publish(
+                    TopicArn='arn:aws:sns:us-east-1:992382420467:Pedidos',  # Reemplaza con tu ARN real
+                    Message=message,
+                    Subject='Nuevo pedido recibido'
+                )
+                print("SNS response:", response)
+            except Exception as e:
+                print("Error sending SNS:", str(e))
+    
+    return {'statusCode': 200, 'body': 'Procesado correctamente'}
